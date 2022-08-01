@@ -1,0 +1,14 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo right">Logo</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li><a onclick="loadModal('authModal')">Log In</a></li>
+      <li><a onclick="changePage('/signup')">Sign Up</a></li>
+      <li><a onclick="changePage('/')">Home</a></li>
+    </ul>
+  </div>
+</nav>£££££
+componentInit = () => {}
+
+£££££
+£££££

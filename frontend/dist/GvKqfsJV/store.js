@@ -1,0 +1,2 @@
+const componentCache = new Map();
+

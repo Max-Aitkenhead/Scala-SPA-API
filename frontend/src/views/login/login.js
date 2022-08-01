@@ -1,0 +1,3 @@
+componentInit = () => {
+    M.updateTextFields();
+}

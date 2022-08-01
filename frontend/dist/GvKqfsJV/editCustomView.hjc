@@ -1,0 +1,71 @@
+<div class="container">
+    
+
+    <div id="markupInputForm">
+        <h2>Edit Custom View</h2>  
+        <button class="btn waves" onclick="showPreview()">Preview</button>
+        <div class="input-field col s6">
+            <input id="nameInput" type="text">
+            <label class="active" for="page_name">Page Name</label>
+        </div>
+        <div class="input-field col s6">
+            <input id="pathInput" type="text">
+            <label class="active" for="page_path">Page Path</label>
+        </div>
+        <div class="input-field col s6">
+            <textarea id="markupInput" class="materialize-textarea"></textarea>
+            <label for="markupInput">Markup</label>
+        </div>
+        <div class="input-field col s6">
+            <textarea id="cssInput" class="materialize-textarea"></textarea>
+            <label for="cssInput">CSS</label>
+        </div>
+        <div class="input-field col s6">
+            <textarea id="jsInput" class="materialize-textarea"></textarea>
+            <label for="jsInput">JavaScript</label>
+        </div>
+
+        <button class="btn waves" onclick="printy()">print</button>
+    </div>
+
+    
+</div>
+
+<div id="markupPreview" style="display:none">
+    <button class="btn waves" onclick="hidePreview()">Edit Page</button>
+    <div id="generateContent"></div>
+</div>
+£££££
+componentInit = () => {
+    M.updateTextFields();
+}
+
+const getPageJson = () => ({
+    name: getInput("nameInput"),
+    path: getInput("pathInput"),
+    markup: getInput("markupInput"),
+    css: getInput("cssInput"),
+    js: getInput("jsInput")
+});
+
+const getInput = (id) => document.getElementById(id).value;
+
+const showPreview = () => {
+    console.log(getPageJson());
+    document.getElementById("markupInputForm").style.display = "none";
+    document.getElementById("generateContent").innerHTML = parseRawMarkup(getPageJson().markup);
+    document.getElementById("markupPreview").style.display = "block";
+};
+
+const hidePreview = () => {
+    document.getElementById("markupPreview").style.display = "none";
+    document.getElementById("markupInputForm").style.display = "block";
+}
+
+
+£££££
+.classhere{
+    width:100%;
+}
+
+£££££

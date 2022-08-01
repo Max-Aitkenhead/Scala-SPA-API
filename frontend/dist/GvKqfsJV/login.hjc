@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Login</h1>
+    <div class="input-field col s6">
+        <input id="emailInput" type="text">
+        <label class="active" for="emailInput">Page Name</label>
+    </div>
+    <div class="input-field col s6">
+        <input id="pwordInput" type="password">
+        <label class="active" for="pwordInput">Page Name</label>
+    </div>
+
+    <button class="btn waves">Log in</button>
+
+    <a href="#thingy" class="btn waves">hash test</a>
+</div>£££££
+componentInit = () => {
+    M.updateTextFields();
+}£££££
+£££££
